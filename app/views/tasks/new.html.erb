@@ -1,2 +1,13 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+<h1>New Task</h1>
+<%= form_for @task do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true%>
+  </div>
+
+  <div>
+    <%= f.label :comment %>
+    <%= f.text_field :comment %>
+  </div>
+    <%= f.submit %>
+  <% end %>
