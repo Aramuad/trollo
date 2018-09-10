@@ -1,5 +1,6 @@
 class ListsController < ApplicationController
-  
+  before_action :set_list, only:[:show, :edit, :update]
+
   def index
     @lists = Lists.all
   end
@@ -39,5 +40,9 @@ end
 
   def list_params
     params.require(:list).permit(:title, :tasks)
+  end
+
+  def set_list
+    @list = List.find(params[:id])
   end
 end
