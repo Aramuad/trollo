@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_tasks, only: [:show, :update :destroy :edit]
+  before_action :set_task, only:[:show, :update :destroy :edit]
 
   def index
     @tasks = Task.all 
@@ -31,7 +31,7 @@ end
 
 
 private
-  def set_tasks 
+  def set_task
     @task = Task.find(params[:id])
   end
 
