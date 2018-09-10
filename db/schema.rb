@@ -10,11 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 0) do
+=======
 ActiveRecord::Schema.define(version: 2018_09_10_204418) do
+>>>>>>> 65eb2d366725cefad69908eb2dabda3ae8e3e46b
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
+=======
   create_table "boards", force: :cascade do |t|
     t.string "work"
     t.string "chores"
@@ -38,4 +44,5 @@ ActiveRecord::Schema.define(version: 2018_09_10_204418) do
     t.datetime "updated_at", null: false
   end
 
+>>>>>>> 65eb2d366725cefad69908eb2dabda3ae8e3e46b
 end
