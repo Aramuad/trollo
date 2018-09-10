@@ -14,16 +14,25 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params)
     if @list.save
-      redirect_to
+      redirect_to lists_show_path
+    else
+      render :new
   end
+end
 
   def edit
   end
 
   def update
+    if @list.update
+      redirect_to lists_show_path
+    else
+      render :update
   end
+end
 
   def destroy
+    @list.destroy
   end
 
   private
@@ -31,6 +40,4 @@ class ListsController < ApplicationController
   def list_params
     params.require(:list).permit(:title, :tasks)
   end
-
-
 end
