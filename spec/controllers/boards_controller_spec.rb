@@ -1,3 +1,15 @@
+
+def index
+end
+
+def show
+end
+
+def new
+end
+
+
+
 require 'rails_helper'
 
 RSpec.describe BoardsController, type: :controller do
