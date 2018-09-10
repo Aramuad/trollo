@@ -1,7 +1,7 @@
 
 Rails.application.routes.draw do
-
-    root 'boards#index'
+  
+  root 'boards#index'
 
   resources :boards
   resources :lists
