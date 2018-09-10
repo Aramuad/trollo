@@ -1,5 +1,12 @@
 <h1>Boards#index</h1>
 <p>TROLLO</p>
-<h1 class="home-header>This page is under construction.</h1>
 
-
+<%= link_to 'Create Board', new_board_path %>
+<hr />
+<ul>
+<% @boards.each do |board| %>
+  <li>
+  <%= link_to board.name, board %>
+  </li>
+  <% end %>
+  </ul>
