@@ -30,10 +30,6 @@ end
   end
 
 
-
-
-
-
 private
   def set_tasks 
     @task = Task.find(params[:id])
