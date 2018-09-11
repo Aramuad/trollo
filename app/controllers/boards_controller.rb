@@ -1,16 +1,16 @@
 class BoardsController < ApplicationController
-  before_action :set_boards, only:[:show, :update, :destroy, :edit]
+  before_action :set_board, only:[:show, :update, :destroy, :edit]
 
   def index
     @boards = Board.all 
-    @lists = List.all
+    #@lists = List.all
   end
 
   def show
   end
 
   def new
-    @task = Board.new 
+    @board = Board.new 
   end
 
   def create 
@@ -36,7 +36,7 @@ end
 
 
 private
-  def set_boards
+  def set_board
     @board = Board.find(params[:id])
   end
 

@@ -1,2 +1,17 @@
 <h1>Boards#new</h1>
 <p>Here you fill out information for your new board!</p>
+
+<%= form_for @board do |f| %>
+  <div>
+    <%= f.label :work %>
+    <%= f.text_field :work, required: true%>
+  </div>
+
+  <div>
+  <%= f.label :chores %>
+  <%= f.text_field :chores, required: true%>
+</div>
+
+<%= f.submit %>
+
+  <% end %>
