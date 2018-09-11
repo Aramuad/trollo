@@ -2,20 +2,20 @@ class ListsController < ApplicationController
   before_action :set_list, only:[:show, :edit, :destroy, :update]
 
   def index
-    @lists = current_board.list
+    @lists = List.all
   end
 
   def show
   end
 
   def new
-    @list = current_board.list.new
+    @list = List.new
   end
 
   def create
-    @list = current_board.list.new(list_params)
+    @list = List.new(list_params)
     if @list.save
-      redirect_to lists_show_path
+      redirect_to board_list_path, notice: "List Created Successfully"
     else
       render :new
   end
@@ -26,7 +26,7 @@ end
 
   def update
     if @list.update
-      redirect_to current_board, notice: "List Updated Successfully"
+      redirect_to board_lists_path, notice: "List Updated Successfully"
     else
       render :edit
   end
@@ -34,7 +34,7 @@ end
 
   def destroy
     @list.destroy
-    redirect_to current_board, notice: "Running Riot"
+    redirect_to , board_lists_path, notice: "Running Riot"
   end
 
   private
@@ -44,6 +44,6 @@ end
   end
 
   def set_list
-    @list = current_board.lists.find(params[:id])
+    @list = Lists.find(params[:id])
   end
 end
