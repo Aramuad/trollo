@@ -3,6 +3,7 @@ class BoardsController < ApplicationController
 
   def index
     @boards = Board.all 
+    @lists = List.all
   end
 
   def show
