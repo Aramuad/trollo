@@ -1,0 +1,13 @@
+<%= form_for [@list, @task] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, required: true %>
+
+  <br />
+
+  <%= f.label :board_id %>
+  <%= f.select :board_id, ['No Board', nil] + @boards.collect { |b| [b.name, b.id] } %>
+
+  <br />
+
+  <%= f.submit %>
+<% end %>
