@@ -19,7 +19,6 @@ class TasksController < ApplicationController
   end
 
   def create 
-    # binding.pry
     @task = @list.tasks.new(task_params)
 
   if @task.save
