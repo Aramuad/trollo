@@ -2,8 +2,12 @@ class TasksController < ApplicationController
 <<<<<<< HEAD
   before_action :set_tasks, only: [:show, :update, :destroy, :edit]
 =======
+<<<<<<< HEAD
+  before_action :set_tasks, only: [:show, :update, :destroy, :edit]
+=======
   before_action :set_task, only:[:show, :update :destroy :edit]
 >>>>>>> 9a9598dc3c58c18e9eba3d9b35aec17a83e5043d
+>>>>>>> 003fd62eebb452fc639d8763e787d5a9486a2222
 
   def index
     @tasks = Task.all 
